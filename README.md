@@ -111,7 +111,7 @@ Like a Busybox, we need create a custon config. Inside of config screan, in  the
 make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- menuconfig
 ```
 
-After the previous configurations are completed, we need compile the Linux kernel with ```vmlinux``` .
+After the previous configurations are completed, we need compile the Linux kernel with ```vmlinux```.
 ```
 make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- -j16 vmlinux
 ```
@@ -137,7 +137,7 @@ Compile the Spike with Linux Kernel image we generated.
 --with-payload=/path/to/Linux/Kernel/vmlinux
 ```
 
-For running spike, we must use bbl
+For running spike, we must use bbl.
 ```
 spike bbl
 ```
