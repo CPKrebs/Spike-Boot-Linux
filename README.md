@@ -26,8 +26,8 @@ make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- menuconfig
 ```
 After that, just make the config.
 ```
-make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- -j16
-make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- install -j16
+make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- -j`nproc`
+make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- install -j`nproc`
 cd ..
 ```
 
@@ -113,7 +113,7 @@ make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- menuconfig
 
 After the previous configurations are completed, we need compile the Linux kernel with ```vmlinux```.
 ```
-make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- -j16 vmlinux
+make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- -j`nproc` vmlinux
 ```
 
 After compilation, we will see ```vmlinux``` file in the current directory.
