@@ -20,10 +20,12 @@ git clone https://git.busybox.net/busybox
 cd busybox
 ```
 
-Next, we need create a custon config, for this use ```menuconfig```. Inside of config screan, enable the ```Build static binary (no shared libs)```.
+Next, we need create a custon config, for this use ```menuconfig```. Inside of config screan, enable the ```Build static binary (no shared libs)```, like a image below.
 ```
 make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- menuconfig
 ```
+![cover image](figures/busybox.png)
+
 After that, just make the config.
 ```
 make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- -j`nproc`
@@ -31,7 +33,7 @@ make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- install -j`nproc`
 cd ..
 ```
 
-In the end it is expected to have the ```busybox```(~2MB) file in the project's root folder.
+In the end, it is expected to have the ```busybox```(~2MB) file in the project's root folder.
 
 
 # Creating root path
@@ -106,10 +108,11 @@ cp rootfs.cpio linux/rootfs.cpio
 cd linux
 ```
 
-Like a Busybox, we need create a custon config. Inside of config screan, in  the ```Initial RAM filesystem and RAM disk (initramfs/initrd) support``` option, we must link ```rootfs.cpio``` file.
+Like a Busybox, we need create a custon config. Inside of config screan, in  the ```Initial RAM filesystem and RAM disk (initramfs/initrd) support``` option, we must link ```rootfs.cpio``` file, like a image below.
 ```
 make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- menuconfig
 ```
+![cover image](figures/linuxkernel.png)
 
 After the previous configurations are completed, we need compile the Linux kernel with ```vmlinux```.
 ```
