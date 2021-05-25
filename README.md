@@ -24,7 +24,7 @@ Next, we need create a custon config, for this use ```menuconfig```. Inside of c
 ```
 make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- menuconfig
 ```
-![image1](figures/busybox.png)
+![image1](figures/Busybox.png)
 
 After that, just make the config.
 ```
