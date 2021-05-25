@@ -123,7 +123,7 @@ After compilation, we will see ```vmlinux``` file in the current directory.
 
 Download the Proxy Kernel and Boot Loader from [riscv-pk](https://github.com/riscv/riscv-pk) repo:
 ```
-git clone https://github.com/riscv/riscv-isa-sim.git
+git clone https://github.com/riscv/riscv-pk.git
 mkdir riscv-pk/build && cd riscv-pk/build
 ```
 
@@ -145,7 +145,7 @@ mkdir riscv-isa-sim/build && cd riscv-isa-sim/build
 ```
 
 
-Compile the Spike
+Compile the Spike.
 ```
 ../configure --prefix=$RISCV 
 ```
