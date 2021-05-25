@@ -119,6 +119,21 @@ make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- -j`nproc` vmlinux
 After compilation, we will see ```vmlinux``` file in the current directory.
 
 
+# Build Boot Loader
+
+Download the Proxy Kernel and Boot Loader from [riscv-pk](https://github.com/riscv/riscv-pk) repo:
+```
+git clone https://github.com/riscv/riscv-isa-sim.git
+mkdir riscv-pk/build && cd riscv-pk/build
+```
+
+Compile the pk and bbl with Linux Kernel image we generated.
+```
+../configure --prefix=$RISCV \
+--host=riscv64-unknown-linux-gnu \
+--with-payload=/path/to/Linux/Kernel/vmlinux
+```
+
 
 # Running the Kernel 
 
@@ -130,11 +145,9 @@ mkdir riscv-isa-sim/build && cd riscv-isa-sim/build
 ```
 
 
-Compile the Spike with Linux Kernel image we generated.
+Compile the Spike
 ```
-../configure --prefix=$RISCV \
---host=riscv64-unknown-linux-gnu \
---with-payload=/path/to/Linux/Kernel/vmlinux
+../configure --prefix=$RISCV 
 ```
 
 For running spike, we must use bbl.
