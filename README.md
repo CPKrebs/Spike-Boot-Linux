@@ -130,11 +130,13 @@ git clone https://github.com/riscv/riscv-pk.git
 mkdir riscv-pk/build && cd riscv-pk/build
 ```
 
-Compile the pk and bbl with Linux Kernel image we generated.
+Compile and make the pk and bbl with Linux Kernel image we generated.
 ```
 ../configure --prefix=$RISCV \
 --host=riscv64-unknown-linux-gnu \
 --with-payload=/path/to/Linux/Kernel/vmlinux
+make -j`nproc`
+make install
 ```
 
 
@@ -148,9 +150,11 @@ mkdir riscv-isa-sim/build && cd riscv-isa-sim/build
 ```
 
 
-Compile the Spike.
+Compile and make the Spike.
 ```
 ../configure --prefix=$RISCV 
+make -j`nproc`
+make install
 ```
 
 For running spike, we must use bbl.
