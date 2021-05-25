@@ -24,7 +24,7 @@ Next, we need create a custon config, for this use ```menuconfig```. Inside of c
 ```
 make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- menuconfig
 ```
-![cover image](figures/busybox.png)
+![image1](figures/busybox.png)
 
 After that, just make the config.
 ```
@@ -112,7 +112,7 @@ Like a Busybox, we need create a custon config. Inside of config screan, in  the
 ```
 make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- menuconfig
 ```
-![cover image](figures/linuxkernel.png)
+![image2](figures/linux.png)
 
 After the previous configurations are completed, we need compile the Linux kernel with ```vmlinux```.
 ```
@@ -157,5 +157,9 @@ For running spike, we must use bbl.
 ```
 spike bbl
 ```
+
+After all process we must see a message to start the console of our linux, like a image below:
+
+![image3](figures/kernel.png)
 
 
