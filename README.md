@@ -52,7 +52,7 @@ vim /etc/init.d/rcS
 
 Inside this script, adding all synbolic link for initialisation.
 
-OBS: All standard Linux commands are within the ``` busybox``` file, so to access them, we need to use busybox before the command. To eliminate this it is necessary to add symbolic links, such as ```ln -s /bin/busybox /bin/ls```.
+OBS: All standard Linux commands are within the ``` busybox``` file, so to access them, we need to use busybox before the command. To eliminate this, it is necessary to add symbolic links, such as ```ln -s /bin/busybox /bin/ls```.
 ```
 #!/bin/sh
 busybox ln -s /bin/busybox /bin/ln
@@ -88,7 +88,7 @@ sudo mknod dev/console c 5 1
 ```
 
 
-Them , we must combine the ```root``` into a sinle file.
+Them , we must combine the ```root```path, into a sinle file.
 ```
 find . | cpio --quiet -o -H newc > ../rootfs.cpio
 cd.. 
