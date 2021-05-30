@@ -1,4 +1,4 @@
-# Running boot Linux in Spike
+# Running boot Linux on Spike
 
 Tutorial for build the Linux Kernel with Busybox, and running into Spike simulator.
 
