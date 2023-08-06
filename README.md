@@ -91,7 +91,7 @@ sudo mknod dev/console c 5 1
 Them , we must combine the ```root```path, into a single file.
 ```
 find . | cpio --quiet -o -H newc > ../rootfs.cpio
-cd.. 
+cd .. 
 ```
 
 
