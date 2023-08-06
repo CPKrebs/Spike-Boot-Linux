@@ -47,7 +47,7 @@ mkdir -p bin etc etc/init.d dev lib proc opt sbin sys tmp usr usr/bin usr/lib us
 ```
 We'll need a script ```rcS``` for initialisation.
 ```
-vim /etc/init.d/rcS
+vim etc/init.d/rcS
 ```
 
 Inside this script, adding all synbolic link for initialisation.
