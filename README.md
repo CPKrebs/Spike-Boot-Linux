@@ -84,6 +84,7 @@ ln -s ../bin/busybox sbin/init
 ln -s sbin/init init
 cd bin/
 ln -s busybox sh
+cd ..
 sudo mknod dev/console c 5 1
 ```
 
